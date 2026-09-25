@@ -1,0 +1,66 @@
+[lstm] ep  5 val RMSE 0.4695
+[lstm] ep 10 val RMSE 0.4591
+[lstm] ep 15 val RMSE 0.4613
+[lstm] ep 20 val RMSE 0.4504
+[lstm] ep 25 val RMSE 0.4489
+[lstm] ep 30 val RMSE 0.4474
+[lstm] ep 35 val RMSE 0.4485
+[lstm] ep 40 val RMSE 0.4544
+[dgm2_gate] ep  1 loss 7.411 rec 7.374 kl 0.370 gamma 0.269 val RMSE 1.0130 (4.0s)
+[dgm2_gate] ep  2 loss 2.683 rec 2.393 kl 1.449 gamma 0.003 val RMSE 0.9695 (4.0s)
+[dgm2_gate] ep  3 loss 1.885 rec 1.549 kl 1.118 gamma 0.000 val RMSE 0.8158 (4.0s)
+[dgm2_gate] ep  4 loss 1.528 rec 1.336 kl 0.480 gamma 0.000 val RMSE 0.6095 (3.9s)
+[dgm2_gate] ep  5 loss 1.325 rec 1.207 kl 0.237 gamma 0.000 val RMSE 0.5700 (4.0s)
+[dgm2_gate] ep  6 loss 1.229 rec 1.111 kl 0.198 gamma 0.000 val RMSE 0.5554 (4.1s)
+[dgm2_gate] ep  7 loss 1.178 rec 1.055 kl 0.176 gamma 0.000 val RMSE 0.5452 (4.0s)
+[dgm2_gate] ep  8 loss 1.145 rec 1.019 kl 0.158 gamma 0.000 val RMSE 0.5432 (4.0s)
+[dgm2_gate] ep  9 loss 1.133 rec 1.005 kl 0.142 gamma 0.000 val RMSE 0.5372 (3.9s)
+[dgm2_gate] ep 10 loss 1.127 rec 0.998 kl 0.129 gamma 0.000 val RMSE 0.5353 (4.0s)
+[dgm2_gate] ep 11 loss 1.110 rec 0.989 kl 0.121 gamma 0.000 val RMSE 0.5356 (4.1s)
+[dgm2_gate] ep 12 loss 1.100 rec 0.984 kl 0.116 gamma 0.000 val RMSE 0.5303 (3.9s)
+[dgm2_gate] ep 13 loss 1.097 rec 0.984 kl 0.113 gamma 0.000 val RMSE 0.5279 (4.0s)
+[dgm2_gate] ep 14 loss 1.090 rec 0.979 kl 0.111 gamma 0.000 val RMSE 0.5240 (4.0s)
+[dgm2_gate] ep 15 loss 1.081 rec 0.972 kl 0.109 gamma 0.000 val RMSE 0.5243 (4.1s)
+[dgm2_gate] ep 16 loss 1.082 rec 0.974 kl 0.108 gamma 0.000 val RMSE 0.5208 (4.1s)
+[dgm2_gate] ep 17 loss 1.077 rec 0.970 kl 0.107 gamma 0.000 val RMSE 0.5227 (3.9s)
+[dgm2_gate] ep 18 loss 1.077 rec 0.971 kl 0.106 gamma 0.000 val RMSE 0.5227 (4.0s)
+[dgm2_gate] ep 19 loss 1.070 rec 0.965 kl 0.105 gamma 0.000 val RMSE 0.5200 (4.0s)
+[dgm2_gate] ep 20 loss 1.067 rec 0.963 kl 0.104 gamma 0.000 val RMSE 0.5181 (3.9s)
+[dgm2_gate] ep 21 loss 1.063 rec 0.959 kl 0.104 gamma 0.000 val RMSE 0.5176 (4.1s)
+[dgm2_gate] ep 22 loss 1.067 rec 0.964 kl 0.103 gamma 0.000 val RMSE 0.5148 (4.0s)
+[dgm2_gate] ep 23 loss 1.067 rec 0.964 kl 0.103 gamma 0.000 val RMSE 0.5132 (4.0s)
+[dgm2_gate] ep 24 loss 1.058 rec 0.955 kl 0.103 gamma 0.000 val RMSE 0.5199 (4.0s)
+[dgm2_gate] ep 25 loss 1.054 rec 0.951 kl 0.103 gamma 0.000 val RMSE 0.5092 (4.0s)
+[dgm2_gate] ep 26 loss 1.031 rec 0.927 kl 0.104 gamma 0.000 val RMSE 0.5086 (4.0s)
+[dgm2_gate] ep 27 loss 1.020 rec 0.919 kl 0.102 gamma 0.000 val RMSE 0.5090 (4.0s)
+[dgm2_gate] ep 28 loss 1.010 rec 0.910 kl 0.100 gamma 0.000 val RMSE 0.5048 (4.0s)
+[dgm2_gate] ep 29 loss 1.001 rec 0.902 kl 0.099 gamma 0.000 val RMSE 0.5048 (3.9s)
+[dgm2_gate] ep 30 loss 0.997 rec 0.899 kl 0.099 gamma 0.000 val RMSE 0.5010 (4.1s)
+[dgm2_gate] ep 31 loss 0.997 rec 0.898 kl 0.099 gamma 0.000 val RMSE 0.5019 (4.0s)
+[dgm2_gate] ep 32 loss 0.993 rec 0.895 kl 0.098 gamma 0.000 val RMSE 0.5009 (4.0s)
+[dgm2_gate] ep 33 loss 0.988 rec 0.891 kl 0.097 gamma 0.000 val RMSE 0.4997 (4.1s)
+[dgm2_gate] ep 34 loss 0.994 rec 0.897 kl 0.097 gamma 0.000 val RMSE 0.4979 (4.2s)
+[dgm2_gate] ep 35 loss 0.990 rec 0.893 kl 0.097 gamma 0.000 val RMSE 0.4990 (4.2s)
+[dgm2_gate] ep 36 loss 0.990 rec 0.893 kl 0.097 gamma 0.000 val RMSE 0.4971 (4.1s)
+[dgm2_gate] ep 37 loss 0.994 rec 0.897 kl 0.097 gamma 0.000 val RMSE 0.4967 (4.3s)
+[dgm2_gate] ep 38 loss 0.991 rec 0.894 kl 0.097 gamma 0.000 val RMSE 0.4970 (4.2s)
+[dgm2_gate] ep 39 loss 0.990 rec 0.893 kl 0.097 gamma 0.000 val RMSE 0.4970 (4.4s)
+[dgm2_gate] ep 40 loss 0.991 rec 0.894 kl 0.097 gamma 0.000 val RMSE 0.4969 (4.6s)
+{
+  "Naive (last value)": {
+    "RMSE": 0.5895480513572693,
+    "MAE": 0.3030696213245392
+  },
+  "GMM-HMM": {
+    "RMSE": 0.6893863081932068,
+    "MAE": 0.5284196138381958
+  },
+  "LSTM": {
+    "RMSE": 0.45318740606307983,
+    "MAE": 0.2722376883029938
+  },
+  "DGM2-L (gate)": {
+    "RMSE": 0.4991379976272583,
+    "MAE": 0.3204779326915741
+  }
+}
