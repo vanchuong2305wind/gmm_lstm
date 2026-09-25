@@ -18,6 +18,7 @@ class Report:
         self.eq_no = 0
         self.fig_no = 0
         self.tab_no = 0
+        self.labels = {}
         self._setup()
 
     # ------------------------------------------------------------ setup
@@ -139,7 +140,7 @@ class Report:
     def numbered(self, items):
         self.bullets(items, style="List Number")
 
-    def eq(self, latex, number=True):
+    def eq(self, latex, number=True, label=None):
         """Công thức hiển thị (display): bảng 2 cột không viền – cột trái công thức căn giữa, cột phải số (n)."""
         from docx.enum.table import WD_CELL_VERTICAL_ALIGNMENT
         width = self.doc.sections[0].page_width - self.doc.sections[0].left_margin - self.doc.sections[0].right_margin
@@ -161,24 +162,27 @@ class Report:
         pn.paragraph_format.space_after = Pt(0)
         if number:
             self.eq_no += 1
+            if label: self.labels['eq:' + label] = self.eq_no
             pn.add_run(f"({self.eq_no})")
         return self.eq_no
 
     # ------------------------------------------------------------ figures / tables
-    def fig(self, path, caption, width_cm=15.5):
+    def fig(self, path, caption, width_cm=15.5, label=None):
         par = self.doc.add_paragraph()
         par.alignment = WD_ALIGN_PARAGRAPH.CENTER
         par.paragraph_format.keep_with_next = True
         par.add_run().add_picture(path, width=Cm(width_cm))
         self.fig_no += 1
+        if label: self.labels['fig:' + label] = self.fig_no
         c = self.doc.add_paragraph(style="Caption")
         c.alignment = WD_ALIGN_PARAGRAPH.CENTER
         r = c.add_run(f"Hình {self.fig_no}. "); r.bold = True
         self._add_rich(c, caption)
         return self.fig_no
 
-    def table(self, header, rows, caption, col_widths=None, bold_best=None, font_size=11):
+    def table(self, header, rows, caption, col_widths=None, bold_best=None, font_size=11, label=None):
         self.tab_no += 1
+        if label: self.labels['tab:' + label] = self.tab_no
         c = self.doc.add_paragraph(style="Caption")
         c.alignment = WD_ALIGN_PARAGRAPH.CENTER
         c.paragraph_format.keep_with_next = True
@@ -236,7 +240,18 @@ class Report:
         par = self.doc.add_paragraph()
         self._field(par, 'TOC \\o "1-3" \\h \\z \\u')
 
+    def resolve_refs(self):
+        """Thay các chỗ giữ [[eq:x]], [[fig:x]], [[tab:x]] bằng số thứ tự thật."""
+        pat = re.compile(r"\[\[((?:eq|fig|tab):[\w-]+)\]\]")
+        for t in self.doc.element.body.iter(qn("w:t")):
+            if t.text and "[[" in t.text:
+                def sub(mo):
+                    assert mo.group(1) in self.labels, "Thiếu nhãn " + mo.group(1)
+                    return str(self.labels[mo.group(1)])
+                t.text = pat.sub(sub, t.text)
+
     def save(self, path):
+        self.resolve_refs()
         # đặt chế độ tương thích Word 2013+ để Word không mở ở "Compatibility Mode"
         settings = self.doc.settings.element
         compat = settings.find(qn("w:compat"))
